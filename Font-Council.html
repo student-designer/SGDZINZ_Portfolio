@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Font Council-SGDZINZ Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Comfortaa"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        width: 100%;
+        height: 1870px;
+
+        background-image: linear-gradient(to bottom right, #ffffff, #bed7ff);
+      }
+
+      .Section {
+        width: 100%;
+        /* height: 1850px; */
+
+        /* background-image: linear-gradient(to bottom right, #ffffff, #bed7ff); */
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .Header {
+        width: 90%;
+        height: 315px;
+
+        margin-top: 20px;
+
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+
+        position: absolute;
+      }
+
+      .Back {
+        position: relative;
+        left: 0px;
+        top: 20px;
+      }
+
+      .Head {
+        margin-top: 0px;
+        text-align: center;
+      }
+
+      .Head h1 {
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        font-size: 96px;
+        font-weight: 300;
+
+        color: #3b83f600;
+
+        -webkit-text-stroke-color: #3b82f6;
+        -webkit-text-stroke-width: 1px;
+      }
+
+      .Head h5 {
+        font-family: "Comfortaa";
+        font-size: 32px;
+        font-weight: 300;
+
+        color: #190061;
+      }
+
+      .Head h6 {
+        text-align: left;
+        margin-top: 2%;
+        margin-bottom: 1%;
+
+        font-size: 20px;
+        font-weight: 800;
+        font-family: "Comfortaa";
+
+        color: #190061;
+      }
+
+      .Head p {
+        text-align: justify;
+
+        font-size: 18px;
+        font-family: "Comfortaa";
+
+        color: #190061;
+      }
+
+      .Content {
+        width: 100%;
+        height: 990px;
+
+        margin-top: 31%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .One {
+        width: 90%;
+        height: 330px;
+
+        display: flex;
+        flex-direction: row;
+      }
+
+      .Text1 {
+        /* padding-top: 6%; */
+        padding-left: 2%;
+        width: 50%;
+        font-family: "Comfortaa";
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .Text1 h5 {
+        text-align: center;
+        font-size: 32px;
+        font-weight: 300;
+
+        color: #190061;
+      }
+
+      .Text1 p {
+        text-align: justify;
+        margin-top: 2%;
+
+        font-size: 18px;
+
+        color: #190061;
+      }
+
+      .Image1 {
+        width: 50%;
+        height: 100%;
+      }
+
+      .Two {
+        width: 90%;
+        height: 400px;
+
+        display: flex;
+        flex-direction: row;
+      }
+
+      .Text2 {
+        /* padding-top: 6%; */
+        padding-right: 2%;
+        width: 50%;
+        font-family: "Comfortaa";
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .Text2 h5 {
+        text-align: center;
+        font-size: 32px;
+        font-weight: 300;
+
+        color: #190061;
+      }
+
+      .Text2 p {
+        text-align: justify;
+        margin-top: 3%;
+
+        font-size: 18px;
+
+        color: #190061;
+      }
+
+      .Text2 img {
+        margin-top: 5%;
+      }
+
+      .Image2 {
+        width: 50%;
+        height: 100%;
+      }
+
+      .Three {
+        width: 90%;
+        height: 400px;
+
+        display: flex;
+        flex-direction: row;
+      }
+
+      .Text3 {
+        /* padding-top: 6%; */
+        padding-left: 2%;
+        width: 50%;
+        font-family: "Comfortaa";
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .Text3 h5 {
+        text-align: center;
+        font-size: 32px;
+        font-weight: 300;
+
+        color: #190061;
+      }
+
+      .Text3 p {
+        text-align: justify;
+        margin-top: 2%;
+
+        font-size: 18px;
+
+        color: #190061;
+      }
+
+      .Image3 {
+        width: 50%;
+        height: 100%;
+      }
+
+      .Contact_Me {
+        width: 100%;
+        height: 40vh;
+
+        margin-top: 120px;
+
+        background-color: black;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 5%;
+      }
+
+      .Connect_Card1 {
+        width: 200px;
+        height: 200px;
+
+        background-image: linear-gradient(
+          to bottom right,
+          rgb(255, 210, 210),
+          white
+        );
+
+        border-radius: 20px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .Connect_Card1 img {
+        width: 60%;
+        height: 30%;
+        border-radius: 20px;
+      }
+
+      .Connect_Card2 {
+        width: 200px;
+        height: 200px;
+
+        background-image: linear-gradient(to bottom right, #bed7ff, #ffffff);
+
+        border-radius: 20px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .Connect_Card2 img {
+        width: 30%;
+        height: 30%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="Section">
+      <div class="Header">
+        <a style="text-decoration: none" href="Portfolio_Shubh.html">
+          <div class="Back"><img src="Return.png" /></div
+        ></a>
+        <div class="Head">
+          <h1>FONT COUNCIL</h1>
+          <h5>The courtroom of Typography</h5>
+          <h6>Overview</h6>
+          <p>
+            Welcome to the high-stakes world of elite design firms. In Font
+            Council, you aren't just selecting a typeface; you are its legal
+            defense team fighting for its typographic life. This is an
+            intellectual battleground designed for four teams of sharp-eyed
+            designers and persuasive debaters. The goal is simple but
+            challenging: prove that your chosen font is the superior example of
+            typographic anatomy against three rival firms in a grueling,
+            13-round courtroom battle.
+          </p>
+        </div>
+      </div>
+      <div class="Content">
+        <div class="One">
+          <div class="Image1">
+            <img style="width: 100%; height: 100%" src="One.png" />
+          </div>
+          <div class="Text1">
+            <h5>The Concept: Typographic Litigation</h5>
+            <p>
+              The game transforms the abstract nuances of font design into
+              concrete evidence in a trial setting. At the start of the game,
+              each of the four teams pledges allegiance to one iconic font
+              family (e.g., Open Sans, Helvetica, etc.). This font is your
+              client. For the rest of the game, you must defend its honor, its
+              curves, and its serifs against all criticism.
+            </p>
+          </div>
+        </div>
+        <div class="Two">
+          <div class="Text2">
+            <h5>Colour Theory & Selection</h5>
+            <p>
+              The premium dark blue and shades of yellow in box and card designs
+              elevate the legal theme.
+            </p>
+            <img src="Colour Palette.png" />
+          </div>
+          <div class="Image2">
+            <img style="width: 100%; height: 100%" src="Two.png" />
+          </div>
+        </div>
+        <div class="Three">
+          <div class="Image3">
+            <img style="width: 100%; height: 100%" src="Three.png" />
+          </div>
+          <div class="Text3">
+            <h5>Conclusion</h5>
+            <p>
+              A successful blend of design education and strategic gameplay,
+              receiving positive feedback from design community.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="Contact_Me" id="CONTACT">
+        <a
+          target="_blank"
+          href="mailto:shubh.gala.bdes2028@atlasskilltech.university"
+          ><div class="Connect_Card1">
+            <img src="Gmail Logo.png" /></div
+        ></a>
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/shubh-gala-a1bba7314?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+          ><div class="Connect_Card2">
+            <img src="LinkedIn Logo.png" /></div
+        ></a>
+      </div>
+    </div>
+  </body>
+</html>

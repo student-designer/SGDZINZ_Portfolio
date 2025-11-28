@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SGDZINZ Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Comfortaa"
+      rel="stylesheet"
+    />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .Hero {
+        width: 100%;
+        height: 3150px;
+
+        display: flex;
+        flex-direction: column;
+      }
+
+      .Nav {
+        width: 100%;
+        height: 250px;
+        position: fixed;
+
+        z-index: 3;
+      }
+
+      .Navbar {
+        width: 100%;
+        height: 70px;
+
+        /* background-image: linear-gradient(
+          to bottom,
+          #222222,
+          rgba(255, 255, 255, 0)
+        ); */
+
+        background-color: #000000bc;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: row;
+
+        /* position: fixed; */
+        position: absolute;
+        top: 0%;
+        left: 0%;
+      }
+
+      .Logo {
+        width: 73px;
+        height: 37.5px;
+
+        margin-left: 90px;
+        /* margin-top: 10px; */
+      }
+
+      .Navigation {
+        width: 860px;
+        height: 50px;
+
+        /* margin-top: 10px; */
+        margin-right: 30px;
+
+        border-radius: 20px;
+
+        /* background-color: #3b83f632; */
+        /* opacity: 20%; */
+
+        z-index: 2;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10%;
+
+        flex-direction: row;
+      }
+
+      .Icon {
+        width: 120px;
+        height: 20px;
+
+        /* border: 1px solid white; */
+        opacity: 100%;
+        z-index: 2;
+
+        font-size: 20px;
+        font-family: "Comfortaa";
+        color: #f1f2f0;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: normal;
+
+        text-decoration: none;
+      }
+
+      .Icon:hover,
+      .Icon:active,
+      .Icon:focus {
+        text-decoration: none;
+      }
+
+      .Icon h6 {
+        text-decoration: none;
+      }
+
+      .Icon:active h6 {
+        text-decoration: none;
+      }
+
+      .Icon:hover h6 {
+        text-decoration: none;
+      }
+
+      .BGHero {
+        width: 100%;
+        height: 100%;
+
+        position: relative;
+        bottom: 0px;
+        left: 0px;
+      }
+
+      .Home {
+        width: 100%;
+        height: 100vh;
+
+        display: flex;
+        justify-content: center;
+        position: relative;
+
+        background-image: linear-gradient(to top right, #3b82f6, #190061);
+      }
+
+      .AboutMe {
+        width: 100%;
+        height: 100vh;
+
+        background-image: linear-gradient(to bottom left, #bed7ff, #ffffff);
+
+        display: flex;
+        flex-direction: row;
+      }
+
+      .Story {
+        width: 640px;
+        height: 450px;
+
+        margin-left: 90px;
+        margin-top: 142px;
+
+        /* border: #222222 1px solid; */
+      }
+
+      .Story h1 {
+        margin-bottom: 5%;
+
+        font-size: 50px;
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        letter-spacing: 1px;
+        font-weight: 400;
+
+        color: #ffffff00;
+
+        -webkit-text-stroke-color: #3b82f6;
+        -webkit-text-stroke-width: 1px;
+      }
+
+      .Quote {
+        width: 620px;
+        height: 130px;
+      }
+
+      .QuoteL {
+        margin-bottom: 2px;
+      }
+
+      .Speech {
+        width: 700px;
+
+        font-family: "Comfortaa";
+        font-size: 18px;
+        text-align: justify;
+
+        color: #190061;
+      }
+
+      .QuoteR {
+        margin-top: -5px;
+        padding-left: 107%;
+      }
+
+      .Softwares {
+        width: 630px;
+        height: 100px;
+
+        margin-top: 130px;
+      }
+
+      .Software_Title {
+        font-size: 18px;
+        font-family: "Comfortaa";
+
+        color: #190061;
+      }
+
+      .Profile {
+        width: 470px;
+        height: 450px;
+
+        margin-top: 142px;
+        margin-left: 280px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .Photo {
+        width: 370px;
+        height: 370px;
+        border-radius: 190px;
+
+        /* border: #190061 5px solid; */
+        background-color: white;
+        box-shadow: 0px 0px 8px #1800613a;
+      }
+
+      .Software_Scroll {
+        width: 700px;
+        height: 70px;
+
+        margin-top: 2%;
+
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        overflow: hidden;
+
+        -webkit-mask-image: linear-gradient(
+          90deg,
+          transparent,
+          #fff 20%,
+          #fff 80%,
+          transparent
+        );
+      }
+
+      .Software_Scroll div {
+        white-space: nowrap;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        gap: 10%;
+
+        animation: scroll var(--time) linear infinite;
+        animation-delay: calc(var(--time) * -1);
+      }
+
+      .Software_Scroll div:nth-child {
+        animation: Scroll2 var(--time) linear infinite;
+        animation-delay: calc(var(--time) / -2);
+      }
+
+      .Scrolltwo:nth-child {
+        animation: Scroll2 var(--time) linear infinite;
+        animation-delay: calc(var(--time) / -2);
+      }
+
+      @keyframes scroll {
+        0% {
+          transform: translateX(100%);
+        }
+
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+
+      @keyframes scroll2 {
+        0% {
+          transform: translateX(0%);
+        }
+
+        100% {
+          transform: translateX(-200%);
+        }
+      }
+
+      .Software_Scroll div span {
+        display: inline-flex;
+        margin: 10px;
+        padding: 5px 10px;
+      }
+
+      .Scrolltwo {
+        margin-left: 35%;
+      }
+
+      .Name {
+        width: 370px;
+        height: 50px;
+
+        margin-top: 2%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+
+        gap: 2%;
+      }
+
+      .Name h2 {
+        font-size: 36px;
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        font-weight: 300;
+
+        color: #fdfdfd00;
+
+        -webkit-text-stroke-color: #3b82f6;
+        -webkit-text-stroke-width: 1px;
+      }
+
+      .Profile p {
+        font-size: 18px;
+        font-family: "Comfortaa";
+
+        color: #190061;
+
+        margin-top: 1%;
+      }
+
+      .My_Designs {
+        width: 100%;
+        height: 100vh;
+
+        background-image: linear-gradient(to bottom right, #bed7ff, #ffffff);
+
+        display: flex;
+        /* justify-content: center;
+        align-items: center; */
+        flex-direction: column;
+      }
+
+      .My_Designs h1 {
+        margin-left: 90px;
+        margin-top: 142px;
+        /* margin-bottom: ; */
+
+        font-size: 50px;
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        letter-spacing: 1px;
+        font-weight: 400;
+
+        text-align: left;
+
+        color: #ffffff00;
+
+        -webkit-text-stroke-color: #3b82f6;
+        -webkit-text-stroke-width: 1px;
+      }
+
+      .Card_Block {
+        margin-left: 40px;
+        margin-top: 20px;
+
+        width: 90vw;
+        height: 400px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 80px;
+      }
+
+      .Card1 {
+        width: 260px;
+        height: 400px;
+
+        background-image: linear-gradient(to bottom right, white, #bed7ff);
+        border-radius: 20px;
+
+        box-shadow: 0px 0px 8px #1800613a;
+
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+
+        cursor: pointer;
+      }
+
+      .Card2 {
+        width: 260px;
+        height: 400px;
+
+        background-image: linear-gradient(to bottom right, white, #bed7ff);
+        border-radius: 20px;
+
+        box-shadow: 0px 0px 8px #1800613a;
+      }
+
+      .Card1 img {
+        width: 238px;
+        height: 177px;
+
+        margin-top: 12px;
+      }
+
+      .Card1 h2 {
+        margin-top: 12px;
+
+        font-size: 32px;
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        font-weight: 300;
+
+        color: #fdfdfd00;
+
+        -webkit-text-stroke-color: #3b82f6;
+        -webkit-text-stroke-width: 0.8px;
+      }
+
+      .Card1 p {
+        width: 90%;
+        margin-top: 8px;
+
+        color: #190061;
+        font-size: 14px;
+        font-family: "Comfortaa";
+
+        text-align: center;
+      }
+
+      .My_Expertise {
+        width: 100%;
+        height: 100vh;
+
+        background-image: linear-gradient(to bottom left, #bed7ff, #ffffff);
+
+        display: flex;
+        /* justify-content: center;
+        align-items: center; */
+        flex-direction: column;
+      }
+
+      .My_Expertise h1 {
+        margin-left: 90px;
+        margin-top: 142px;
+        /* margin-bottom: ; */
+
+        font-size: 50px;
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        letter-spacing: 1px;
+        font-weight: 400;
+
+        text-align: left;
+
+        color: #ffffff00;
+
+        -webkit-text-stroke-color: #3b82f6;
+        -webkit-text-stroke-width: 1px;
+      }
+
+      .Card {
+        width: 260px;
+        height: 280px;
+
+        background-image: linear-gradient(to bottom right, white, #bed7ff);
+        border-radius: 20px;
+
+        box-shadow: 0px 0px 8px #1800613a;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .Card h2 {
+        margin-top: 12px;
+
+        font-size: 32px;
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        font-weight: 300;
+
+        color: #fdfdfd00;
+
+        -webkit-text-stroke-color: #3b82f6;
+        -webkit-text-stroke-width: 0.8px;
+      }
+
+      .Card p {
+        width: 90%;
+        margin-top: 8px;
+
+        color: #190061;
+        font-size: 14px;
+        font-family: "Comfortaa";
+
+        text-align: center;
+      }
+
+      .Card img {
+        /* width: 238px; */
+        height: 50px;
+
+        margin-top: 12px;
+        margin-bottom: 2%;
+      }
+
+      .Contact_Me {
+        width: 100%;
+        height: 40vh;
+
+        background-color: black;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        gap: 5%;
+      }
+
+      .Connect_Card1 {
+        width: 200px;
+        height: 200px;
+
+        background-image: linear-gradient(
+          to bottom right,
+          rgb(255, 210, 210),
+          white
+        );
+
+        border-radius: 20px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .Connect_Card1 img {
+        width: 60%;
+        height: 30%;
+        border-radius: 20px;
+      }
+
+      .Connect_Card2 {
+        width: 200px;
+        height: 200px;
+
+        background-image: linear-gradient(to bottom right, #bed7ff, #ffffff);
+
+        border-radius: 20px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .Connect_Card2 img {
+        width: 30%;
+        height: 30%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="Hero">
+      <div class="Home" id="HOME">
+        <div class="Nav">
+          <div class="Navbar">
+            <div class="Logo">
+              <img src="Logo.png" style="height: 100%; width: 100%" />
+            </div>
+            <div class="Navigation">
+              <a style="text-decoration: none" href="#HOME"
+                ><div class="Icon">
+                  <img src="Home.png" style="height: 100%; width: 18%" />
+                  <h6
+                    style="
+                      margin-left: 8px;
+                      margin-top: 4px;
+                      text-decoration: none;
+                    "
+                  >
+                    Home
+                  </h6>
+                </div></a
+              >
+              <a style="text-decoration: none" href="#ABOUT">
+                <div class="Icon">
+                  <img src="About Me.png" style="height: 100%; width: 18%" />
+                  <h6 style="margin-left: 8px; margin-top: 3px">About Me</h6>
+                </div></a
+              >
+              <a style="text-decoration: none" href="#DESIGN"
+                ><div class="Icon">
+                  <img src="My Designs.png" style="height: 100%; width: 18%" />
+                  <h6 style="margin-left: 8px; margin-top: 3px">My Designs</h6>
+                </div></a
+              >
+              <a style="text-decoration: none" href="#CONTACT"
+                ><div class="Icon">
+                  <img src="Contact Me.png" style="height: 100%; width: 18%" />
+                  <h6 style="margin-left: 8px; margin-top: 3px">Contact Me</h6>
+                </div></a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="BGHero">
+          <img
+            class="BGHero"
+            src="BG Final 1.png"
+            style="width: 100%; height: 100%"
+          />
+        </div>
+      </div>
+      <div class="AboutMe" id="ABOUT">
+        <div class="Story">
+          <h1>MY STORY</h1>
+          <div class="Quote">
+            <img class="QuoteL" src="Quote.png" />
+            <p class="Speech">
+              I'm a creative Communication Designer you can trust, and I love
+              turning ideas into visual solutions. I'm also really interested in
+              coding and digital projects, always looking for new ways to make
+              design exciting.
+            </p>
+            <img class="QuoteR" src="QuoteR.png" />
+          </div>
+          <div class="Softwares">
+            <p class="Software_Title">Softwares I Use :</p>
+            <div class="Software_Scroll" style="--time: 20s">
+              <div>
+                <span><img src="Affinity.png" /></span>
+                <span><img src="Canva.png" /></span>
+                <span><img src="Blender_3D.png" /></span>
+                <span><img src="Figma_3D.png" /></span>
+                <span><img src="Affinity by Canva.png" /></span>
+              </div>
+              <div class="Scrolltwo">
+                <span><img src="Affinity.png" /></span>
+                <span><img src="Canva.png" /></span>
+                <span><img src="Blender_3D.png" /></span>
+                <span><img src="Figma_3D.png" /></span>
+                <span><img src="Affinity by Canva.png" /></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="Profile">
+          <div class="Photo"></div>
+          <div class="Name">
+            <img src="India.png" />
+            <h2>SHUBH GALA</h2>
+          </div>
+          <p>2nd Year Communication Designer</p>
+        </div>
+      </div>
+      <div class="My_Designs" id="DESIGN">
+        <div class="My_Projects">
+          <h1>MY PROJECTS</h1>
+        </div>
+        <div class="Card_Block">
+          <a style="text-decoration: none" href="Dawn-Legacy.html"
+            ><div class="Card1">
+              <img src="Dawn Legacy.png" />
+              <h2>DAWN LEGACY</h2>
+              <p>
+                My first fully AI-generated movie. This project accelerated my
+                expertise in two key areas: sophisticated AI generation prompts
+                and advanced video editing skills. It marks a major milestone in
+                my technical and creative development.
+              </p>
+            </div></a
+          >
+          <div class="Card2"></div>
+          <a style="text-decoration: none" href="Font-Council.html"
+            ><div class="Card1">
+              <img src="Font Council.png" style="border-radius: 20px" />
+              <h2>FONT COUNCIL</h2>
+              <p>
+                A vital design learning project focused on product presentation.
+                I gained skills in packaging, strategic colour selection, and
+                creating informative assets like design cards and a user manual.
+              </p>
+            </div></a
+          >
+          <div class="Card2"></div>
+        </div>
+      </div>
+      <div class="My_Expertise" id="EXPERTISE">
+        <div class="Expertise">
+          <h1>MY EXPERTISE</h1>
+        </div>
+        <div class="Card_Block">
+          <div class="Card">
+            <img src="UIUX.png" />
+            <h2>UI/UX</h2>
+            <p>
+              UI focuses on the aesthetics and elements (look and feel) of a
+              digital product, while UX ensures the entire user journey is
+              intuitive, efficient, and enjoyable.
+            </p>
+          </div>
+          <div class="Card">
+            <img src="Code.png" />
+            <h2>Coding</h2>
+            <p>
+              Coding is the process of writing sets of instructions in a
+              programming language that a computer executes to build software,
+              apps, and digital systems.
+            </p>
+          </div>
+          <div class="Card">
+            <img src="Graphics.png" />
+            <h2>Graphic Design</h2>
+            <p>
+              Graphic designing is the art and practice of creating visual
+              content (using images, text, and layout) to communicate specific
+              messages or brand ideas.
+            </p>
+          </div>
+          <div class="Card">
+            <img src="Animation.png" />
+            <h2>Animation</h2>
+            <p>
+              Animation is the technique of creating the illusion of movement by
+              rapidly displaying a sequence of slightly different static images
+              or models (frames).
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="Contact_Me" id="CONTACT">
+        <a
+          target="_blank"
+          href="mailto:shubh.gala.bdes2028@atlasskilltech.university"
+          ><div class="Connect_Card1">
+            <img src="Gmail Logo.png" /></div
+        ></a>
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/shubh-gala-a1bba7314?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+          ><div class="Connect_Card2">
+            <img src="LinkedIn Logo.png" /></div
+        ></a>
+      </div>
+    </div>
+  </body>
+</html>
